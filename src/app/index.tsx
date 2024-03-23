@@ -1,5 +1,9 @@
 import App from 'next/app';
+import { Yeseva_One } from 'next/font/google';
 import Image from 'next/image';
+// npx create-next-app@latest
+// フォルダ名 y y y y y n
+// npm run dev
 
 // ブラウザでアクセスできるURLは、コードベース内のファイルとフォルダによって定義されている
 // すべてのルートは「app」フォルダ内に配置する
