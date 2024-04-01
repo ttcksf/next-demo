@@ -6,7 +6,7 @@ const page = ({ params }: { params: { productId: string } }) => {
   // 動的なページになる
   // IDからAPIを実行してデータ取得することも可能になる
 
-  return <div>ブログ記事:{params.productId}</div>;
+  return <div>商品名:{params.productId}</div>;
 };
 
 export default page;
