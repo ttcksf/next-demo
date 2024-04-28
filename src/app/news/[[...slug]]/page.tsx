@@ -7,13 +7,13 @@ const page = ({ params }: { params: { slug: string[] } }) => {
   if (params.slug?.length === 2) {
     return (
       <h1>
-        {params.slug[0]}と{params.slug[1]}です。
+        {params.slug[0]}年{params.slug[1]}月のお知らせ一覧です。
       </h1>
     );
   } else if (params.slug?.length === 1) {
-    return <h1>{params.slug[0]}です。</h1>;
+    return <h1>{params.slug[0]}年のお知らせ一覧です。</h1>;
   } else {
-    return <h1>News</h1>;
+    return <h1>お知らせ一覧です。</h1>;
   }
 };
 
