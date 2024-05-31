@@ -1,15 +1,20 @@
 import { Metadata } from 'next';
 import React from 'react';
+// インポート
+import Link from 'next/link';
 
-// layout.tsxのオブジェクト形式のタイトルを受け取るのにも型指定とimportが必要
 export const metadata: Metadata = {
-  // title: 'アバウトページです',
   title: '会社概要',
   description: '説明文です',
 };
 
 const page = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      About
+      <Link href="/">トップページ</Link>
+    </div>
+  );
 };
 
 export default page;
