@@ -1,3 +1,5 @@
+// ここを追加しておく
+'use client';
 import React from 'react';
 // インポート(クリックによって移動できるようにする)
 import Link from 'next/link';
