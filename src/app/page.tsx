@@ -7,6 +7,8 @@ const page = () => {
     <div>
       page
       <Link href="/products">商品一覧</Link>
+      <Link href="/order">注文一覧</Link>
+      <Link href="/news">お知らせ一覧</Link>
     </div>
   );
 };
