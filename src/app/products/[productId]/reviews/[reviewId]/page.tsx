@@ -1,6 +1,11 @@
 import { notFound } from 'next/navigation';
 import React from 'react';
-// フォルダ名に動的セグメントを持たせることで、ネストされた動的ルートを作成できる
+
+// ランダム関数
+const getRandomInt = (count: number) => {
+  return Math.floor(Math.random() * count);
+};
+
 const page = ({
   params,
 }: {
@@ -9,12 +14,16 @@ const page = ({
     reviewId: string;
   };
 }) => {
-  console.log(params);
-  // レビューidが1000までしかないので1001以上はページがない想定
-  if (parseInt(params.reviewId) > 1000) {
-    // インポート文も書く
-    notFound();
+  // １、２のどちらかを出す
+  const random = getRandomInt(2);
+  // 何回かやるとエラー画面になる想定
+  if (random === 1) {
+    throw new Error('エラー');
   }
+  // ここは消しておく
+  // if (parseInt(params.reviewId) > 1000) {
+  //   notFound();
+  // }
   return (
     <div>
       商品ID：{params.productId}のレビューID：{params.reviewId}
